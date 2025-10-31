@@ -27,6 +27,6 @@ jobs:
         context: .
         push: true
         tages: |
-                ${{secrets.DOCKERHUB_USERNAME}}/simple-webapp:${{github.SHA}}
+                ${{secrets.DOCKERHUB_USERNAME}}/simple-webapp:v${{github.SHA}}
                 ${{secrets.DOCKERHUB_USERNAME}}/simple-webapp:latest
     
