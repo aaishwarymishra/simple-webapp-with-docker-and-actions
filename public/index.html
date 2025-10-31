@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Welcome — Simple Express App</title>
+    <style>
+      :root {
+        --bg: #0f1724;
+        --card: #0b1220;
+        --accent: #6ee7b7;
+        --muted: #94a3b8;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          "Helvetica Neue", Arial;
+      }
+      body {
+        background: linear-gradient(180deg, #071129 0%, var(--bg) 100%);
+        color: #e6eef8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .card {
+        max-width: 880px;
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        padding: 28px;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+      }
+      h1 {
+        margin: 0 0 8px 0;
+        font-size: 28px;
+      }
+      p.lead {
+        color: var(--muted);
+        margin: 0 0 18px;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      a.button {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 8px;
+        background: linear-gradient(90deg, var(--accent), #34d399);
+        color: #042027;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .muted {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      footer {
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      pre {
+        background: #071b2b;
+        padding: 12px;
+        border-radius: 8px;
+        color: #9bd6c6;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Welcome to your Express app</h1>
+      <p class="lead">
+        This is a minimal static HTML page served by Express. It's small,
+        responsive, and ready to customize.
+      </p>
+
+      <div class="row">
+        <a class="button" href="/api">View JSON API</a>
+        <a class="button" href="/health">Health Check</a>
+      </div>
+
+      <section style="margin-top: 18px">
+        <h3 style="margin: 0 0 8px 0">Quick example</h3>
+        <p class="muted">
+          The JSON API at <code>/api</code> returns a small greeting object. The
+          health endpoint returns plain <code>ok</code>.
+        </p>
+        <pre>fetch('/api').then(r=>r.json()).then(console.log)</pre>
+      </section>
+
+      <footer>
+        Built with Express — edit <code>public/index.html</code> and
+        <code>server.js</code> to extend.
+      </footer>
+    </div>
+  </body>
+</html>
